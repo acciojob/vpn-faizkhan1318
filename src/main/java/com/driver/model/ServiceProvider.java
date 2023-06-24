@@ -16,13 +16,13 @@ public class ServiceProvider {
     @JoinColumn
     private Admin admin;
 
-    @OneToMany(mappedBy = "serviceProviderList", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "serviceProvider", cascade = CascadeType.ALL)
     private List<Connection> connectionList = new ArrayList<>();
 
     @ManyToMany(mappedBy = "serviceProviderList", cascade = CascadeType.ALL)
     private List<User> userList =new ArrayList<>();
 
-    @OneToOne(mappedBy = "serviceProvider", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "serviceProvider", cascade = CascadeType.ALL)
     private List<Country> countryList = new ArrayList<>();
 
     public int getId() {

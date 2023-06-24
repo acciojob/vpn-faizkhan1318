@@ -25,7 +25,7 @@ public class User {
     private List<ServiceProvider> serviceProviderList = new ArrayList<>();
 
     @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
-    private CountryName countryName;
+    private CountryName originalCountry;
 
     public int getId() {
         return id;
@@ -91,11 +91,11 @@ public class User {
         this.serviceProviderList = serviceProviderList;
     }
 
-    public CountryName getCountryName() {
-        return countryName;
+    public CountryName getOriginalCountry() {
+        return originalCountry;
     }
 
-    public void setCountryName(CountryName countryName) {
-        this.countryName = countryName;
+    public void setOriginalCountry(CountryName originalCountry) {
+        this.originalCountry = originalCountry;
     }
 }
