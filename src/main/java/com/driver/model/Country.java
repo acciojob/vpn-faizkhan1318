@@ -1,4 +1,3 @@
-// Note: Do not write @Enumerated annotation above CountryName in this model.
 package com.driver.model;
 
 import javax.persistence.*;
@@ -9,7 +8,7 @@ public class Country {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-//    @Enumerated(EnumType.STRING)
+    @Enumerated(EnumType.STRING)
     private CountryName countryName;
 
     private String code;
